@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: black;
+  color: white;
+}
+:root {
+  --primary: #306ad9;
+  --primary2: #4177dc;
+  --blue3: #608ce2;
+  --blue-light: #93b1eb;
+  --light-white: #f1f2f3;
+  --lightgrey: #babec4;
+  --white: #ffffff;
+  --grey: #888b91;
+  --lightblack: #111213;
+  --black: #000000;
+}
+a {
+  color: inherit;
+}
+
+.button-animation1 {
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.button-animation1:hover{
+  color: var(--primary);
+}
+.button-animation1::after {
+  position: absolute;
+  background: white;
+  z-index: 2;
+  content: "";
+  width: 0%;
+  height: 100%;
+  transition: ease .5s;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.button-animation1:hover::after {
+  position: absolute;
+  transition: ease 1s;
+  color: var(--primary);
+  width: 100%;
+ 
+
+}
+.future-technology-col-1 {
+  position: relative;
+}
+.overlay-div {
+  position: absolute;
+  right: 0;
+  bottom: -60px;
+  padding: 10px 30px;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+}
+.overlay-div h2,
+.overlay-div p {
+  text-align: center;
+}
+.car-slider-section h2 {
+  max-width: 400px;
+  margin: 0 auto;
+}

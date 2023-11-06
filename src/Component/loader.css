@@ -1,0 +1,70 @@
+/* loader Css  */
+
+
+.loader {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: -2.5rem;
+}
+.loader .loading {
+  font-size: 1rem;
+}
+.loader svg {
+  margin-left: -2.3rem;
+}
+.car__body {
+  animation: shake 0.2s ease-in-out infinite alternate;
+  stroke: var(--header-link-color);
+}
+.car__wheel--left,
+.car__wheel--right {
+  stroke: var(--header-link-color);
+}
+.car__line {
+  stroke: var(--header-link-color);
+  transform-origin: center right;
+  stroke-dasharray: 22;
+  animation: line 0.8s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+.car__line--top {
+  animation-delay: 0s;
+}
+.car__line--middle {
+  animation-delay: 0.2s;
+}
+.car__line--bottom {
+  animation-delay: 0.4s;
+}
+@keyframes shake {
+  0% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(3%);
+  }
+}
+@keyframes line {
+  0% {
+    stroke-dashoffset: 22;
+  }
+  25% {
+    stroke-dashoffset: 22;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  51% {
+    stroke-dashoffset: 0;
+  }
+  80% {
+    stroke-dashoffset: -22;
+  }
+  100% {
+    stroke-dashoffset: -22;
+  }
+}
